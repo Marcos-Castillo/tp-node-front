@@ -256,29 +256,32 @@
         
         let showModal = document.getElementById("showModal");
         let card = `
-        <div class="fixed-div card col-4 user-select-none">
-        <div class="d-flex flex-row-reverse mb-2 btn-secondary icon-link-hover"  >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#6c757d" class="bi bi-x-square-fill" viewBox="0 0 16 16" onclick="dropModal()">
-            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
-          </svg>  
+        <div class="fixed-div card col user-select-none">
+            <div class="d-flex flex-row-reverse mb-2 btn-secondary icon-link-hover"  >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#6c757d" class="bi bi-x-square-fill" viewBox="0 0 16 16" onclick="dropModal()">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
+                </svg>  
+            </div>
+            <div class="d-flex flex-row-reverse" > 
+                <div  class="badge text-bg-warning mx-1">Rate: ${objeto.rating.rate}</div>
+                <span class="badge text-bg-secondary mx-1">${objeto.category}</span>
+            </div>
+            <div  class="imgOverflow d-none-sm">
+                <img src="${objeto.image}" class="card-img-top " alt="${objeto.title}">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">${objeto.title}</h5>
+                <p class="card-text">${objeto.description}</p>
+                <p class="card-text fs-6 text-body-secondary"> Stock: ${objeto.rating.count} <span class="d-flex flex-row-reverse fs-5">${objeto.price} $ </span></p>
+                <div class="d-flex flex-row-reverse fs-5">
+                    <button class="btn btn-secondary"  onclick="dropModal()">close</button>
+                </div>      
+            
+            </div>
         </div>
-        <div class="d-flex flex-row-reverse" > <div  class="badge text-bg-warning mx-1">Rate: ${objeto.rating.rate}</div><span class="badge text-bg-secondary mx-1">${objeto.category}</span></div>
-        <div  class="imgOverflow">
-          <img src="${objeto.image}" class="card-img-top " alt="${objeto.title}">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">${objeto.title}</h5>
-          <p class="card-text">${objeto.description}</p>
-          <p class="card-text fs-6 text-body-secondary"> Stock: ${objeto.rating.count} <span class="d-flex flex-row-reverse fs-5">${objeto.price} $ </span></p>
-          <div class="d-flex flex-row-reverse fs-5">
-          <button class="btn btn-secondary"  onclick="dropModal()">close</button>
-        </div>      
-          
-        </div>
-      </div>
         
         `
-        console.log(card)
+        
         showModal.innerHTML = card
 
     }
@@ -296,11 +299,11 @@
 
 
 
-    <div class="col-4 mb-4" onclick="showModal(${element.id})">
+    <div class="col-lg-4 col-md-6 mb-4" onclick="showModal(${element.id})">
     
         <div class="card">
             <div class="imgOverflow">
-                <img src="${element.image}"   class="imgOverflow" alt="${
+                <img src="${element.image}"   class="imgOverflow m-2" alt="${
                     element.title
                 }">
             </div>

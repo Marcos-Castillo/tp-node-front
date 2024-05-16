@@ -251,11 +251,11 @@
       let card = `
 
 
-      <div  class="col-lg-4">
+      <div  class="col-lg-4 mb-4">
       <a class="nav-link" href="./productos.html">
       <div class="card" >
       <div class="imgOverflow">
-      <img src="${element.image}"   class="imgOverflow" alt="${
+      <img src="${element.image}"   class="imgOverflow m-2" alt="${
           element.title
       }">
   </div>

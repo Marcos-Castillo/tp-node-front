@@ -30,3 +30,18 @@
     max-width:100%;
     
   }
+
+
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #infoPersona, #infoPersona * {
+      visibility: visible;
+    }
+    #infoPersona {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
