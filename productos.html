@@ -14,7 +14,7 @@
  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Mercado >JS<</a>
+          <a class="navbar-brand" href="./index.html">Mercado >JS<</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -46,15 +46,15 @@
 
  <main class="container mt-5">
 <div class="d-flex justify-content-between">    
-  <div class="col-2">
+  <div class="col-4 px-3">
     <fieldset>
-        <label for="range" class="form-label">Precio Maximo <span id="rangeValue">100</span></label>
-        <input type="range" min="0"  value="100" max="10000" class="form-range" id="range">
+        <label for="range" class="form-label">Precio Maximo <span id="rangeValue"></span></label>
+        <input type="range" min="0"  value="1000" max="1000" class="form-range" id="range">
         
 
     </fieldset>
 </div>
-<div class="col-2 ">
+<div class="col-4 px-3">
   <label for="select" class="form-label">Filtro</label>
   <select class="form-select mb-2" id="select">
     <option>1</option>
@@ -78,20 +78,22 @@
       <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="grey" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
         <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
       </svg></a>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="switchCSS" checked>
+        <label class="form-check-label" for="switchCSS">Cambiar CSS</label>
+      </div>
     </p>
     <p class="mb-1">Codo a codo 2024 - comisión 24255 - grupo 1 </p>
     <p class="mb-0">Nair Brocca - Marcos Castillo -  Pedraza Román - Nicolás Albalat</p>
   </div>
 </footer>
 
+
 <div id="showModal">
   <!-- aqui se muestra el modal -->
 </div>
  
-<div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="switchCSS">
-  <label class="form-check-label" for="switchCSS">Cambiar CSS</label>
-</div>
+
 
 
 <script src="./js/css.js"></script>
