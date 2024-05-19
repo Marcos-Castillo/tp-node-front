@@ -279,7 +279,7 @@ function showModal(id) {
 
   let showModal = document.getElementById("showModal");
   let card = `
-        <div class="fixed-div card col user-select-none">
+        <div class="fixed-div card  col-12 col-md-8 col-lg-6  user-select-none">
             <div class="d-flex flex-row-reverse mb-2 btn-secondary icon-link-hover"  >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#6c757d" class="bi bi-x-square-fill" viewBox="0 0 16 16" onclick="dropModal()">
                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
@@ -290,11 +290,11 @@ function showModal(id) {
                 <span class="badge text-bg-secondary mx-1">${objeto.category}</span>
             </div>
             <div  class="imgOverflow d-none-sm">
-                <img src="${objeto.image}" class="card-img-top " alt="${objeto.title}">
+            <img src="${objeto.image}" class="img-container" alt="${objeto.title}">
             </div>
             <div class="card-body">
                 <h5 class="card-title">${objeto.title}</h5>
-                <p class="card-text">${objeto.description}</p>
+                <p class="card-text card-text-scroll">${objeto.description}</p>
                 <p class="card-text fs-6 text-body-secondary"> Stock: ${objeto.rating.count} <span class="d-flex flex-row-reverse fs-5">${objeto.price} $ </span></p>
                 <div class="d-flex flex-row-reverse fs-5">
                     <button class="btn btn-secondary"  onclick="dropModal()">close</button>
@@ -320,11 +320,11 @@ inputRange.addEventListener("input", function () {
   filterProductsByPrice(this.value);
 });
 
-function filterProductsByPrice(maxPrice) {
+function filterProductsByPrice(minPrice) {
   productos.innerHTML = "";
   let responseFiltrada = response.filter(
     (product) =>
-      product.category === inputSelect.value && product.price <= maxPrice
+      product.category === inputSelect.value && product.price >= minPrice
   );
   responseFiltrada.forEach((element) => {
     let card = `

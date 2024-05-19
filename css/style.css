@@ -19,17 +19,28 @@
       transform: translate(-50%, -50%);
       padding: 20px;
       -webkit-box-shadow: 0px 0px 50px 40px rgba(0,0,0,0.50); 
-      box-shadow: 0px 0px 50px 400px rgba(0,0,0,0.50);
+      box-shadow: 0px 0px 50px 100vw rgba(0,0,0,0.50);
       z-index: 9999;
-      max-height: 90vh;
+      max-height: 95vh;
   }
 
   .imgOverflow{
     max-height: 18rem; 
     overflow: hidden;
-    max-width:100%;
+    text-align: center;
+    max-width:90%;
+    justify-content: center;
     
   }
+  img{
+    max-height: 15rem;
+    max-width:85vw;
+     
+    }
+.card-text-scroll {
+      max-height: 20vh;
+      overflow-y: scroll;
+         }
 
 
   @media print {
